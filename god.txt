@@ -220,4 +220,3 @@ RService.RenderStepped:Connect(function()
     end
 end)
 
-SeparateNotify("Ciazware", "Universal Aimbot loaded in: "..string.format("%.7f", tostring(tick() - CiazwareUniversalAimbotLoadingTime)), "", 3)
