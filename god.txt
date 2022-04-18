@@ -164,7 +164,6 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
                 end
             end)
         end
