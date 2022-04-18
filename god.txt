@@ -25,7 +25,7 @@ getgenv().SeparateNotify = function(title, text, icon, time)
     SGui:SetCore("SendNotification",{
         Title = title;
         Text = text;
-        Icon = "rbxassetid://5793181157";
+        Icon = "rbxassetid://6541834965";
         Duration = time;
     })
 end
@@ -36,7 +36,7 @@ getgenv().Notify = function(title, text, icon, time)
         SGui:SetCore("SendNotification",{
             Title = title;
             Text = text;
-            Icon = "rbxassetid://5793181157";
+            Icon = "rbxassetid://6541834965";
             Duration = time;
         }) 
     end
@@ -164,7 +164,7 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
+                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 0)
                 end
             end)
         end
