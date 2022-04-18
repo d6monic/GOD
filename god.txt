@@ -169,7 +169,6 @@ Uis.InputBegan:Connect(function(Key)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("Ciazware", "Aimlock: "..tostring(Aimlock), "", 3)
         end
     end
 end)
