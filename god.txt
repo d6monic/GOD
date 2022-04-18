@@ -31,7 +31,7 @@ getgenv().SeparateNotify = function(title, text, icon, time)
 end
 
 getgenv().Notify = function(title, text, icon, time)
-    if CanNotify == false then 
+    if CanNotify == true then 
         if not time or not type(time) == "number" then time = 3 end
         SGui:SetCore("SendNotification",{
             Title = title;
@@ -164,13 +164,13 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
+                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 0)
                 end
             end)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("Ciazware", "Aimlock: "..tostring(Aimlock), "", 3)
+            Notify("Ciazware", "Aimlock: "..tostring(Aimlock), "", 0)
         end
     end
 end)
