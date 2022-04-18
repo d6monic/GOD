@@ -11,7 +11,7 @@ getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature
 
 getgenv().CiazwareUniversalAimbotLoadingTime = tick()
 if CiazwareUniversalAimbotLoaded == true then
-    Notify("YukiWare", "Universal Prynce", "", 3)
+    Notify("Ciazware", "Script Loaded Already", "", 3)
     return 
 end
 
@@ -25,7 +25,7 @@ getgenv().SeparateNotify = function(title, text, icon, time)
     SGui:SetCore("SendNotification",{
         Title = title;
         Text = text;
-        Icon = "rbxassetid://6541834965";
+        Icon = "rbxassetid://5793181157";
         Duration = time;
     })
 end
@@ -36,7 +36,7 @@ getgenv().Notify = function(title, text, icon, time)
         SGui:SetCore("SendNotification",{
             Title = title;
             Text = text;
-            Icon = "rbxassetid://6541834965";
+            Icon = "rbxassetid://5793181157";
             Duration = time;
         }) 
     end
@@ -164,13 +164,13 @@ Uis.InputBegan:Connect(function(Key)
                 local Target;Target = GetNearestTarget()
                 if Target ~= nil then 
                     AimlockTarget = Target
-                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 0)
+                    Notify("Ciazware", "Aimlock Target: "..tostring(AimlockTarget), "", 3)
                 end
             end)
         end
         if Key.KeyCode == Enum.KeyCode[AimlockToggleKey] then 
             Aimlock = not Aimlock
-            Notify("Ciazware", "Aimlock: "..tostring(Aimlock), "", 0)
+            Notify("Ciazware", "Aimlock: "..tostring(Aimlock), "", 3)
         end
     end
 end)
@@ -222,4 +222,4 @@ RService.RenderStepped:Connect(function()
     end
 end)
 
-SeparateNotify("YukiWare", "Universal Prynce: "..string.format("%.7f", tostring(tick() - CiazwareUniversalAimbotLoadingTime)), "", 3)
+SeparateNotify("Ciazware", "Universal Aimbot loaded in: "..string.format("%.7f", tostring(tick() - CiazwareUniversalAimbotLoadingTime)), "", 3)
