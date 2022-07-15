@@ -11,7 +11,7 @@ getgenv().PredictionVelocity = 10 -- The speed of the PredictMovement feature
 
 getgenv().CiazwareUniversalAimbotLoadingTime = tick()
 if CiazwareUniversalAimbotLoaded == true then
-    Notify("Ciazware", "Script Loaded Already", "", 3)
+    Notify("...", "Script Loaded Already", "", 3)
     return 
 end
 
